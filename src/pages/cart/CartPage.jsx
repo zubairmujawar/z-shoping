@@ -184,7 +184,7 @@ const CartPage = () => {
                 </dl>
                 <div className="px-2 pb-4 font-medium text-green-700">
                   <div className="flex gap-4 mb-6">
-                    <button className="w-full px-4 py-3 text-center text-gray-100 bg-orange-400 border border-transparent border-gray-700  hover:text-orange-600 hover:bg-orange-100 rounded-xl">
+                    <button className="w-full px-4 py-3 text-center text-gray-100 bg-orange-400 border border-transparent border-gray-700  hover:text-white hover:bg-orange-600 rounded-xl">
                       Buy now
                     </button>
                   </div>

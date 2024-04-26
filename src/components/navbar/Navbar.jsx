@@ -20,12 +20,16 @@ const Navbar = () => {
             Cart
           </Link>
         </li>
+        
       </ul>
       <input
         type="text"
         placeholder="search food"
         className="p-1 px-2 left-5 rounded-sm w-[18rem] m-3 md:m-0"
       />
+          <Link className="link" to="/login">
+            <button className="bg-white p-2 rounded-sm ">Login</button>
+          </Link>
     </nav>
   );
 };

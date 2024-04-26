@@ -108,7 +108,7 @@ const ProductInfo = () => {
 
                 <div className="mb-6 " />
                 <div className="flex flex-wrap items-center mb-6">
-                  <button className="w-full px-4 py-3 text-center text-orange-400 bg-orange-100 border border-orange-400  hover:bg-orange-400 hover:text-gray-100 rounded-xl">
+                  <button className="w-full px-4 py-3 text-center text-orange-400 bg-orange-200 border border-orange-400  hover:bg-orange-400 hover:text-gray-100 rounded-xl">
                     Add to cart
                   </button>
                 </div>

@@ -6,6 +6,8 @@ import Productinfo from './pages/productinfo/Productinfo'
 import ScrollTop from "./components/scrolltop/ScrollTop";
 import CartPage from './pages/cart/CartPage'
 import AllProducts from "./pages/allproducts/AllProducts";
+import Signup from "./pages/registration/Signup";
+import Login from "./pages/registration/Login";
 function App() {
   return (
     <div>
@@ -17,6 +19,8 @@ function App() {
           <Route path="/productinfo" element={<Productinfo/>}/>
           <Route path="/cartpage" element={<CartPage/>}/>
           <Route path="/allproducts" element={<AllProducts/>}/>
+          <Route path="/signup" element={<Signup/>}/>
+          <Route path="/login" element={<Login/>}/>
         </Routes>
       </Router>
     </div>
