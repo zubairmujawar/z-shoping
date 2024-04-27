@@ -20,6 +20,16 @@ const Navbar = () => {
             Cart
           </Link>
         </li>
+        <li>
+          <Link className="link" to="/userdashboard">
+          User dashboard
+          </Link>
+        </li>
+        <li>
+          <Link className="link" to="/admin-dashboard">
+          Admin dashboard
+          </Link>
+        </li>
         
       </ul>
       <input

@@ -8,6 +8,8 @@ import CartPage from './pages/cart/CartPage'
 import AllProducts from "./pages/allproducts/AllProducts";
 import Signup from "./pages/registration/Signup";
 import Login from "./pages/registration/Login";
+import UserDashboard from "./pages/user/UserDashboard";
+import AdminDashboard from "./pages/admin/AdminDashboard";
 function App() {
   return (
     <div>
@@ -21,6 +23,8 @@ function App() {
           <Route path="/allproducts" element={<AllProducts/>}/>
           <Route path="/signup" element={<Signup/>}/>
           <Route path="/login" element={<Login/>}/>
+          <Route path="/userdashboard" element={<UserDashboard/>}/>
+          <Route path="/admin-dashboard" element={<AdminDashboard/>}/>
         </Routes>
       </Router>
     </div>
