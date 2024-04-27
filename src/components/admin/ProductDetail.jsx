@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const ProductDetail = () => {
     return (
         <div>
@@ -5,7 +7,9 @@ const ProductDetail = () => {
                 {/* text  */}
                 <h1 className=" text-xl text-orange-300 font-bold">All Product</h1>
                 {/* Add Product Button  */}
+                <Link to="/addproduct">
                 <button className="px-5 py-2 bg-orange-50 border border-orange-100 rounded-lg">Add Product</button>
+                </Link>
             </div>
 
             {/* table  */}
