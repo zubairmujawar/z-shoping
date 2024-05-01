@@ -32,7 +32,7 @@ const Signup = () => {
       userSignup.password === ""
     ) {
       toast.error("All Fields are required");
-    }
+      }
 
     setLoading(true);
     try {
@@ -42,7 +42,7 @@ const Signup = () => {
         userSignup.password
       );
 
-      // create user object
+      // create user object with store in firebase
       const user = {
         name: userSignup.name,
         email: users.user.email,

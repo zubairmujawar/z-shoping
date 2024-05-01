@@ -2,9 +2,10 @@ import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import ProductDetail from "../../components/admin/ProductDetail";
 import OrderDetail from "../../components/admin/OrderDetail";
 import UserDetail from "../../components/admin/UserDetail";
+import Layout from "../../components/layout/Layout";
 const AdminDashboard = () => {
   return (
-    <div>
+    <Layout>
       {/* Top */}
       <div className="top mb-5 px-5 mt-5">
         <div className=" bg-orange-50 py-5 border border-orange-100 rounded-lg">
@@ -149,7 +150,7 @@ const AdminDashboard = () => {
           </Tabs>
         </div>
       </div>
-    </div>
+    </Layout>
   );
 };
 
