@@ -1,6 +1,6 @@
 import { Link, useNavigate } from "react-router-dom";
 import Layout from "../../components/layout/Layout";
-import { useContext, useState } from "react";
+import { useContext, useRef, useState } from "react";
 import myContext from "../../context/mycontext";
 import toast from "react-hot-toast";
 import { createUserWithEmailAndPassword } from "firebase/auth";
@@ -11,6 +11,10 @@ import Loader from "../../components/loader/Loader";
 const Signup = () => {
   const context = useContext(myContext);
   const { loading, setLoading } = context;
+
+  // show password state
+  const [showPass, setShowPass] = useState(false)
+
 
   // useNavigate to navigate user to home page after SignUp
   const navigate = useNavigate();
@@ -120,7 +124,9 @@ const Signup = () => {
           {/* Input Three  */}
           <div className="mb-5">
             <input
-              type="password"
+              type={
+                showPass? 'text' : 'password'
+              }
               placeholder="Password"
               value={userSignup.password}
               onChange={(e) =>
@@ -128,6 +134,7 @@ const Signup = () => {
               }
               className="bg-orange-50 border border-orange-200 px-2 py-2 w-96 rounded-md outline-none placeholder-orange-200"
             />
+            <p className="text-sm cursor-pointer font-medium text-gray-500 pl-2 p-1" onClick={()=>setShowPass(!showPass)}>{showPass? 'Hide' : 'Show' } password</p>
           </div>
 
           {/* Signup Button  */}

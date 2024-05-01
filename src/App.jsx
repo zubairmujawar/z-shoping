@@ -14,6 +14,8 @@ import AddProductPage from "./pages/admin/AddProductPage";
 import UpdateProductPage from "./pages/admin/UpdateProductPage";
 import MyState from "./context/myState";
 import { Toaster } from "react-hot-toast";
+import ProtectedRouteForUser from "./protectedroute/ProtectedRouteForUser";
+import ProtectedRouteForAdmin from "./protectedroute/ProtectedRouteForAdmin";
 
 function App() {
   return (
@@ -28,8 +30,22 @@ function App() {
           <Route path="/allproducts" element={<AllProducts />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/user-dashboard" element={<UserDashboard />} />
-          <Route path="/admin-dashboard" element={<AdminDashboard />} />
+          <Route
+            path="/user-dashboard"
+            element={
+              <ProtectedRouteForUser>
+                <UserDashboard />
+              </ProtectedRouteForUser>
+            }
+          />
+          <Route
+            path="/admin-dashboard"
+            element={
+              <ProtectedRouteForAdmin>
+                <AdminDashboard />
+              </ProtectedRouteForAdmin>
+            }
+          />
           <Route path="/addproduct" element={<AddProductPage />} />
           <Route path="/updateproduct" element={<UpdateProductPage />} />
         </Routes>
